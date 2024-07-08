@@ -1,6 +1,7 @@
 package net.axolotl.axolotlmod;
 
 import com.mojang.logging.LogUtils;
+import net.axolotl.axolotlmod.item.ModCreativeModTabs;
 import net.axolotl.axolotlmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,9 @@ public class AxolotlMod
     public AxolotlMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
