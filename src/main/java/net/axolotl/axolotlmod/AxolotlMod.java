@@ -21,7 +21,7 @@ public class AxolotlMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "axolotlmod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public AxolotlMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
